@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mesin Autoencoder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="view"></div>
+    <div id="overlay">
+      <header>
+        <p class="kicker">Simulasi 3D · Three.js</p>
+        <h1>Mesin Autoencoder</h1>
+        <p class="lede">
+          Arsitektur dari masukan sampai rekonstruksi, disusun seperti blok mesin.
+          Pilih komponen untuk melihat persamaan dan perubahan bentuk tensornya.
+        </p>
+        <ul class="legend">
+          <li><i class="swatch" style="background:#d5dee8"></i>Masukan</li>
+          <li><i class="swatch" style="background:#3ddec4"></i>Encoder</li>
+          <li><i class="swatch" style="background:#f0c36a"></i>Latent</li>
+          <li><i class="swatch" style="background:#ff7a59"></i>Decoder</li>
+        </ul>
+      </header>
+      <aside id="inspector" aria-live="polite"></aside>
+      <div id="dock">
+        <div class="transport">
+          <button id="play" class="solid" type="button">Alirkan sinyal</button>
+          <button id="prev" class="ghost" type="button" aria-label="Komponen sebelumnya">←</button>
+          <button id="next" class="ghost" type="button" aria-label="Komponen berikutnya">→</button>
+          <button id="reseed" class="ghost" type="button">Bobot baru</button>
+          <p id="status">Seret untuk mengorbit · gulir untuk zoom · klik blok</p>
+        </div>
+        <div id="timeline" class="timeline"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
